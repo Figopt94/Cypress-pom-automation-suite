@@ -1,5 +1,7 @@
 # Cypress Test Automation Project
 
+[![Cypress Tests](https://github.com/Figopt94/Cypress-pom-automation-suite/actions/workflows/cypress.yml/badge.svg)](https://github.com/Figopt94/Cypress-pom-automation-suite/actions/workflows/cypress.yml)
+
 This project contains automated tests using Cypress for web application testing. It includes test scenarios for login functionality, user registration, and e-commerce testing with PetStore.
 
 ## Project Structure
@@ -53,7 +55,20 @@ npm install
 
 ### Run all tests in headless mode:
 ```bash
+npm test
+# or
 npx cypress run
+```
+
+### Run tests in different browsers:
+```bash
+npm run test:chrome
+npm run test:firefox
+```
+
+### Run tests in headed mode:
+```bash
+npm run test:headed
 ```
 
 ### Open Cypress Test Runner:
@@ -82,6 +97,16 @@ The project uses Page Object Model (POM) pattern for the login functionality, lo
 
 - **Automation Exercise**: https://automationexercise.com/
 - **PetStore**: https://petstore.octoperf.com/
+
+## 🚀 CI/CD
+
+This project includes GitHub Actions for continuous integration:
+
+- **Automated testing** on every push and pull request
+- **Multi-node testing** (Node.js 18.x and 20.x)
+- **Cross-browser testing** (Chrome)
+- **Artifact collection** for failed test screenshots and videos
+- **Test summary reports** in GitHub Actions
 
 ## Contributing
 
