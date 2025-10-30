@@ -1,4 +1,26 @@
 {
+  "name": "cypress-pom-automation-suite",
+  "version": "1.0.0",
+  "description": "Automated testing project with Cypress - 21 test cases for login, registration, and e-commerce scenarios",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress run",
+    "test:headed": "cypress run --headed",
+    "test:chrome": "cypress run --browser chrome",
+    "test:firefox": "cypress run --browser firefox",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run"
+  },
+  "keywords": [
+    "cypress",
+    "automation",
+    "testing",
+    "e2e",
+    "page-object-model",
+    "javascript"
+  ],
+  "author": "Figopt94",
+  "license": "MIT",
   "devDependencies": {
     "cypress": "^15.5.0"
   }
