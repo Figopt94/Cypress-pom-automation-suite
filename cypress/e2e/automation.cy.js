@@ -1,5 +1,5 @@
 describe('Automation Exercise Tests', () => {
-  it('login valido', () => {
+  it('valid login', () => {
     cy.visit('https://automationexercise.com/login');
     cy.get('[data-qa="login-email"]').type('fr94@test.com');
     cy.get('[data-qa="login-password"]').type('test123');
@@ -7,7 +7,7 @@ describe('Automation Exercise Tests', () => {
     cy.get('#header b').should('have.text', 'Filipe Rodrigues');
   })
 
-  it('login invalido', () => {
+  it('invalid login', () => {
     cy.visit('https://automationexercise.com/login');
     cy.get('[data-qa="login-email"]').type('fr94sd@test.com');
     cy.get('[data-qa="login-password"]').type('teqwest123');

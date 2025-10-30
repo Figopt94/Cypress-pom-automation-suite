@@ -5,17 +5,17 @@ describe('Login tests', () => {
 
     it('Valid login', () => {
         cy.visit('https://automationexercise.com/login');
-        login.preencherEmail('fr94@test.com');
-        login.preencherPassword('test123');
-        login.clicarBotaoLogin();
-        login.verificarNomeESobrenome('Filipe Rodrigues');
+        login.fillEmail('fr94@test.com');
+        login.fillPassword('test123');
+        login.clickLoginButton();
+        login.verifyUserName('Filipe Rodrigues');
     })
 
     it('Invalid login', () => {
         cy.visit('https://automationexercise.com/login');
-        login.preencherEmail('fr94@test.com');
-        login.preencherPassword('test1232');
-        login.clicarBotaoLogin();
-        login.verificarMensagemErro('Your email or password is incorrect!');
+        login.fillEmail('fr94@test.com');
+        login.fillPassword('test1232');
+        login.clickLoginButton();
+        login.verifyErrorMessage('Your email or password is incorrect!');
     })
 });

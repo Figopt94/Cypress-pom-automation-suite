@@ -1,30 +1,30 @@
 class Login {
-    // campos email, password, clicar login e verificar sobrenome do utilizador
+    // Email field, password field, login button click and verify user name
 
-    campoEmail = '[data-qa="login-email"]'
-    campoPassword = '[data-qa="login-password"]'
-    butaoLogin = '[data-qa="login-button"]'
-    campoNomeESobrenome = '#header b'
-    mensagemErro = '#form p'
+    emailField = '[data-qa="login-email"]'
+    passwordField = '[data-qa="login-password"]'
+    loginButton = '[data-qa="login-button"]'
+    userNameField = '#header b'
+    errorMessage = '#form p'
 
-    preencherEmail(email) {
-        cy.get(this.campoEmail).type(email);
+    fillEmail(email) {
+        cy.get(this.emailField).type(email);
     }
 
-    preencherPassword(password) {
-        cy.get(this.campoPassword).type(password);
+    fillPassword(password) {
+        cy.get(this.passwordField).type(password);
     }
 
-    clicarBotaoLogin() {
-        cy.get(this.butaoLogin).click();
+    clickLoginButton() {
+        cy.get(this.loginButton).click();
     }
 
-    verificarNomeESobrenome(nomeESobrenome) {
-        cy.get(this.campoNomeESobrenome).should('have.text', nomeESobrenome);
+    verifyUserName(userName) {
+        cy.get(this.userNameField).should('have.text', userName);
     }
 
-    verificarMensagemErro(mensagem) {
-        cy.get(this.mensagemErro).should('have.text', mensagem);
+    verifyErrorMessage(message) {
+        cy.get(this.errorMessage).should('have.text', message);
     }
 }
 

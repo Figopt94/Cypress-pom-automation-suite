@@ -1,5 +1,5 @@
-describe('template spec', () => {
-  it('register', () => {
+describe('Registration tests', () => {
+  it('valid user registration', () => {
     cy.visit('https://automationexercise.com/login');
     cy.get('[data-qa="signup-name"]').click();
     cy.get('[data-qa="signup-name"]').type('Figo');
